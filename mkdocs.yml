@@ -1,0 +1,54 @@
+site_name: bracelet
+repo_url: https://github.com/dsokerin/bracelet
+site_url: https://dsokerin.github.io/bracelet
+site_description: This is a smart bracelet project.
+site_author: Dm. Sokerin
+edit_uri: edit/main/docs/
+repo_name: dsokerin/bracelet
+copyright: Maintained by <a href="https://dsokerin.com">Florian</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append('../')
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dsokerin/bracelet
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/bracelet
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
